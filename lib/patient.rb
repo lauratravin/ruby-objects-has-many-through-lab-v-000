@@ -12,7 +12,8 @@ class Patient
     #   Song.all.select { |e| e.genre =  self} #select requires a condition
          Appointment.new(self,doctor,date)
      end
-    # def artists
-    #   Song.all.collect { |e| e.artist}  #map or collet return just values
-    # end
+    def appointments
+    #  Song.all.collect { |e| e.artist}  #map or collet return just values
+       Appointment.all.select {|e| e.patient = self}
+    end
 end
