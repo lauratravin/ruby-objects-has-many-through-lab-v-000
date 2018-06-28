@@ -13,7 +13,10 @@ class Patient
          Appointment.new(self,doctor,date)
      end
     def appointments
-    #  Song.all.collect { |e| e.artist}  #map or collet return just values
-       Appointment.all.select {|e| e.patient = self}
+    #  Song.all.collect { |e| e.artist}
+       Appointment.all.select {|e| e.patient = self}  #get the app of the patient with all data
+    end
+    def doctors
+      appointments.map { |e| e.doctor}
     end
 end
