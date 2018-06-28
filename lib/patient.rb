@@ -8,9 +8,10 @@ class Patient
     def self.all
       @@all
     end
-    # def songs
+     def new_appointment(doctor,date)
     #   Song.all.select { |e| e.genre =  self} #select requires a condition
-    # end
+         Appointment.new(self,doctor,date)
+     end
     # def artists
     #   Song.all.collect { |e| e.artist}  #map or collet return just values
     # end
