@@ -9,11 +9,11 @@ class Patient
       @@all
     end
      def new_appointment(doctor,date)
-    #   Song.all.select { |e| e.genre =  self} #select requires a condition
+    
          Appointment.new(self,doctor,date)
      end
     def appointments
-    #  Song.all.collect { |e| e.artist}
+
        Appointment.all.select {|e| e.patient = self}  #get the app of the patient with all data
     end
     def doctors
